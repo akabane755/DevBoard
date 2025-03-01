@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    .viobg {
+      background: linear-gradient(130.7deg, rgb(55, 82, 253) 0.419%, rgb(108, 127, 250) 52.66%, rgb(155, 168, 248) 99.733%);
+    }
+  </style>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            dyellow: '#FFDC26',
+            textg: '#000000',
+            bgcol: '#F4F7FF',
+            textcol:'#00303C',
+            
+          },
+         fontFamily:{
+            'pop':['Poppins', 'sans-serif'],
+         },
+         backgroundImage: {
+    'cat': "url('c1-assets/cat-big.png')",
+  },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body id="body" class="bg-[#F4F7FF] font-pop">
+    <header class=" w-[95%] lg:w-[85%] mx-auto bg-white p-5 rounded-2xl mt-[24px]"  >
+        <nav class="flex flex-col lg:flex-row items-center justify-between ">
+            <div class="flex items-center gap-2 text-4xl">
+                <img src="assets/logo.png" alt="">
+                <p class="font-light">Dev<span class="font-bold">Board</span></p> 
+            </div>
+            <div><button id="desk" class="text-white font-medium bg-[#3752FD] rounded-[8px] p-2 mb-5">Back to desk</button></div>
+            </div>
+        </nav>
+        
+    </header>
+   
+    <h1 class="font-bold text-4xl text-center my-8">Blogs</h1>
+    <div class=" w-[95%] lg:w-[87%] mx-auto  p-5 rounded-2xl mt-[24px] ">
+    <div class="rounded-2xl bg-white my-4 p-5">
+        <p class="text-2xl font-semibold py-3">Question-1: What are the different ways to select an element in the DOM?</p>
+        <hr>
+        <p class="pt-3">There are several ways to select an element in the DOM:</p>  
+        <ol class="pb-3">  
+            <li>document.getElementById(): By this, we can access the IDs declared in the HTML file.</li>  
+            <li>document.getElementsByClassName(): By this, we can access the classes declared in the HTML file.</li>  
+            <li>document.getElementsByTagName(): By this, we can access the elements by tag name in the HTML file, such as the  tag.</li>  
+            <li>document.querySelector(): By this, we can select the first element that matches the given element.</li>  
+            <li>document.querySelectorAll(): By this, we can get the list of elements that match the given element.</li>  
+        </ol>
+        
+    </div>
+  
+  <div class="rounded-2xl bg-white my-4 p-5">
+    <p class="text-2xl font-semibold py-3">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+    <hr>
+    <p>innerHTML contains HTML including text and tags and others while innerText contains only visible texts that are not hidden and textContent contains visible and hidden texts. </p>
+    
+</div>
+<div class="rounded-2xl bg-white my-4 p-5">
+  <p class="text-2xl font-semibold py-3">Question-3: What is event delegation in the DOM?  </p>
+  <hr>
+  <p>Event delegation is a process of handeling child element using parent element like adding evenlistener on parent element instead of adding manually on every child element . It handels the issues like adding child element dynamically and if it needs that evenlistener it automatically gets added to it without the need to manually add it.</p>
+  
+</div>
+<div class="rounded-2xl bg-white my-4 p-5">
+  <p class="text-2xl font-semibold py-3">Question-4: What is event bubbling in the DOM?</p>
+  <hr>
+  <p>Event bubbling is a mechanism where if an event occurs in the child element ,it then propagates to it's parent, then the parent's parent and this process keeps on going until it reaches the document.</p>
+  
+</div>
+<div class="rounded-2xl bg-white my-4 p-5" >
+  <p class="text-2xl font-semibold py-3">Question-5: How do you create, add, and remove elements using JavaScript?</p>
+  <hr>
+  <p>1.An element can be created using document.createElement()</p>
+  <p>2.An element can be added using appendChild():appends a child at the end of the parent , append(): appends a list of elements ,prepend() adds a child at the start of the parent element, before():adds an element before that element , after():adds an element after that element.</p>
+  <p>3.An element can be removed using remove() , a child can be removed from parent using removeChild().</p>
+  
+</div>
+</div>
+ <script src="script/main.js"></script>
+ <script src="script/utility.js"></script>
+    </body>
+</html>

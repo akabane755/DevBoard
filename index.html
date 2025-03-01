@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    .viobg {
+      background: linear-gradient(130.7deg, rgb(55, 82, 253) 0.419%, rgb(108, 127, 250) 52.66%, rgb(155, 168, 248) 99.733%);
+    }
+    .textg{
+      color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            dyellow: '#FFDC26',
+           
+            bgcol: '#F4F7FF',
+            textcol:'#00303C',
+            
+          },
+         fontFamily:{
+            'pop':['Poppins', 'sans-serif'],
+         },
+         backgroundImage: {
+    'cat': "url('c1-assets/cat-big.png')",
+  },
+        }
+      }
+    }
+  </script>
+</head>
+<body id="body" class="bg-[#F4F7FF] font-pop">
+    <header class=" w-[95vw] lg:w-[85vw] mx-auto bg-white p-5 rounded-2xl mt-[24px]"  >
+        <nav class="flex items-center justify-between flex-col lg:flex-row ">
+            <div class="flex items-center gap-2 text-4xl">
+                <img src="assets/logo.png" alt="">
+                <p class="font-light">Dev<span class="font-bold">Board</span></p> 
+            </div>
+            <div class="flex flex-col lg:flex-row items-center gap-8 ">
+                <div class="flex gap-2 bg-[#F4F7FF] rounded-[32px] p-3">
+                <img src="assets/checkbox.png" alt="" class="h-[100%]">
+                <p id="increase" class="text-3xl font-bold">23</p>
+            </div>
+             <div class="bg-[#F4F7FF] rounded-[32px] p-3">
+                <img id="themebtn" src="assets/theme-btn.png" alt="">
+            </div>
+            </div>
+        </nav>
+    </header>
+    <div class="flex flex-col lg:flex-row w-[95vw] lg:w-[85vw] mx-auto gap-5 ">
+    <section class=" w-[95vw] lg:w-[61vw]  bg-white p-5 rounded-2xl mt-[24px]">
+        <div class="flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between">
+           <div class="bg-bgcol flex gap-3 items-center rounded-xl p-[32px]">
+            <div class="bg-white rounded-[50%] p-3"><img src="assets/checkbox.png" alt=""></div>
+            <div>
+                <p class="text-[#00303C] font-medium">Task Assigned </p>
+                <p id="decrease" class="font-bold text-3xl">06</p>
+            </div>
+           </div>
+           <div id="entry" class="viobg  flex gap-3 items-center rounded-xl p-[32px]">
+            <div><img src="assets/board.png" alt=""></div>
+            <p class="font-medium text-[24px] text-white w-[70%]">Discover Something New Today!</p>
+           </div>
+           <div class="bg-bgcol flex gap-3 items-center rounded-xl p-[32px]">
+            <div class="bg-white rounded-[50%] p-3"><img src="assets/calender.png" alt=""></div>
+            <div>
+                <p id="day" class="text-[#00303C] text-[22px]" > </p>
+                <p id="date" class="font-bold text-[22px]" > </p>
+            </div>
+           </div>
+        </div>
+        <div class="mt-[64px] ">
+        <div class=" grid  grid-cols-1 lg:grid-cols-3 gap-6 ">
+             <div  class="bg-bgcol space-y-3 p-5 rounded-2xl ">
+              <button class="text-textcol bg-white rounded-[8px] p-2">ShopEase</button>
+              <p id="para1" class="text-textcol font-medium">Fix Mobile Button Issue </p>
+              <p class="text-gray-400 bg-white rounded-[8px] p-4 ">Issue: The mobile navigation button is not responsive.
+                Solution: Update JavaScript event listeners and ensure CSS styles don’t interfere.</p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-textcol font-[14px]">Deadline</p>
+                  <p class="text-textcol font-medium">21 March 2025</p>
+                </div>
+                <button id="btn1" class="text-white font-medium bg-[#3752FD] rounded-[8px] p-2">Completed</button>
+              </div>
+             </div>
+             <div  class="bg-bgcol space-y-3 p-5 rounded-2xl">
+              <button class="text-textcol bg-white rounded-[8px] p-2">CloudSync</button>
+              <p id="para2" class="text-textcol font-medium">Add Dark Mode </p>
+              <p class="text-gray-400 bg-white rounded-[8px] p-4">Dark mode added with user preference storage in localStorage.
+                Users can toggle between light and dark themes.
+                and ensure onClick works properly</p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-textcol font-[14px]">Deadline</p>
+                  <p class="text-textcol font-medium">21 March 2025</p>
+                </div>
+                <button id="btn2" class="text-white font-medium bg-[#3752FD] rounded-[8px] p-2">Completed</button>
+              </div>
+             </div>
+             <div  class="bg-bgcol space-y-3 p-5 rounded-2xl">
+              <button class="text-textcol bg-white rounded-[8px] p-2">SwiftPay</button>
+              <p id="para3" class="text-textcol font-medium">Optimize Home Page</p>
+              <p class="text-gray-400 bg-white rounded-[8px] p-4">Speed up page load by optimizing images, reducing unused JavaScript, and enabling lazy loading.</p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-textcol font-[14px]">Deadline</p>
+                  <p class="text-textcol font-medium">21 March 2025</p>
+                </div>
+                <button id="btn3" class="text-white font-medium bg-[#3752FD] rounded-[8px] p-2">Completed</button>
+              </div>
+             </div>
+             <div  class="bg-bgcol space-y-3 p-5 rounded-2xl">
+              <button class="text-textcol bg-white rounded-[8px] p-2">Meta</button>
+              <p id="para4" class="text-textcol font-medium">Add new emoji 🤲 </p>
+              <p class="text-gray-400 bg-white rounded-[8px] p-4  ">Expanded emoji library with the latest Unicode set to enhance user expression.</p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-textcol font-[14px]">Deadline</p>
+                  <p class="text-textcol font-medium">21 March 2025</p>
+                </div>
+                <button id="btn4" class="text-white font-medium bg-[#3752FD] rounded-[8px] p-2">Completed</button>
+              </div>
+             </div>
+             <div  class="bg-bgcol space-y-3 p-5 rounded-2xl ">
+              <button class="text-textcol bg-white rounded-[8px] p-2">Google LLC</button>
+              <p id="para5" class="text-textcol font-medium">Integrate OpenAI API</p>
+              <p class="text-gray-400 bg-white rounded-[8px] p-4 ">Enabled AI-powered chatbot for better customer support and automated responses.</p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-textcol font-[14px]">Deadline</p>
+                  <p class="text-textcol font-medium">21 March 2025</p>
+                </div>
+                <button id="btn5" class="text-white font-medium bg-[#3752FD] rounded-[8px] p-2">Completed</button>
+              </div>
+             </div>
+             <div   class="bg-bgcol space-y-3 p-5 rounded-2xl">
+              <button class="text-textcol bg-white rounded-[8px] p-2">Glassdoor</button>
+              <p id="para6" class="text-textcol font-medium">Improve Job Searching </p>
+              <p class="text-gray-400 bg-white rounded-[8px] p-4">Enhanced search algorithm by adding filters for salary, location, and job type.</p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-textcol font-[14px]">Deadline</p>
+                  <p class="text-textcol font-medium">21 March 2025</p>
+                </div>
+                <button id="btn6" class="text-white font-medium bg-[#3752FD] rounded-[8px] p-2">Completed</button>
+              </div>
+             </div>
+        </div>
+        
+    </section>
+    <section  class=" w-[95vw] lg:w-[25vw]   bg-white p-5 rounded-2xl mt-[24px]">
+      <div class=" w-[50%] lg:w-[40%] mx-auto text-center space-y-4">
+      <div class="flex gap-4 ">
+        <img src="assets/activity.png" alt="">
+        <p>Activity Log</p>
+      </div>
+      
+      <button id="clr" class="text-white font-medium bg-[#3752FD] rounded-[8px] p-2 mb-5">Clear History</button>
+    </div>
+    <div id="comment"></div>
+    </section>
+  </div>
+  </div>
+  <script src="script/main.js"></script>
+  <script src="script/utility.js"></script>
+</script>
+</body>
+</html>
